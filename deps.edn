@@ -14,5 +14,5 @@
                      com.clojure-goes-fast/clj-async-profiler {:mvn/version "1.2.0"}
                      com.clojure-goes-fast/clj-java-decompiler {:mvn/version "0.3.4"}}}
   ;; Run with clj -T:build function-in-build
-  :build {:deps {io.github.clojure/tools.build {:git/tag "v0.10.1" :git/sha "5e3b8f3"}}
-          :ns-default build}}}
+  :build {:deps {com.github.liquidz/build.edn {:mvn/version "0.11.257"}}
+          :ns-default build-edn.main}}}
