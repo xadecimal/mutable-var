@@ -1,0 +1,3 @@
+{:tasks
+ {test (clojure "-X:test")
+  release (do (run 'test))}}
