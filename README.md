@@ -61,8 +61,6 @@ This library is designed with performance in mind, by utilizing plain arrays of 
 - **Prevent Shadowing Confusion:** Be cautious with variable shadowing as it can lead to confusion. Clear naming conventions can help manage this.
 - **Leverage Type Safety:** Always initialize mutable variables with the intended type and adhere to that type throughout the scope.
 
-Here's a restructured section focusing on the support for primitive types within `mutable-var`, explaining when type inference might be insufficient, and how to apply explicit type hints:
-
 ## Primitive Types
 The `mutable-var` library supports primitive types, enhancing performance by allowing direct operations on these types without the overhead of boxing and unboxing. Clojure's type inference is robust and often suffices for determining the appropriate primitive type. However, there are scenarios where manual intervention via explicit type hints is necessary to ensure optimal performance and correctness.
 
@@ -83,7 +81,7 @@ Explicit type hints are necessary when:
 - **Specific type requirements**: When the intended use of a variable requires a type different from what would be inferred, such as needing an Object type to allow for nil assignments, despite the initial value suggesting a primitive type.
 
 ### Applying Explicit Type Hints
-Explicit type hints can be provided either by annotating the initializing expression or by using casting to enforce the variable to be treated as a desired type or by wrapping in an identity when you want Object type:
+Explicit type hints can be provided either by annotating the initializing expression or by using casting to enforce the variable to be treated as a desired type or by wrapping in an `(identity ...)` when you want Object type:
 
 ```clj
 (var-scope
