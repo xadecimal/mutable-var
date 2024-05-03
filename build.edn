@@ -2,4 +2,14 @@
  :version "0.1.0"
  :description "Adds a mutable variable construct to the Clojure programming language."
  :licenses [{:name "MIT License"
-             :url "https://github.com/xadecimal/mutable-var/blob/main/LICENSE"}]}
+             :url "https://github.com/xadecimal/mutable-var/blob/main/LICENSE"}]
+ :documents [{:file "README.md"
+              :match ":deps \\{com\\.xadecimal\\/mutable-var"
+              :action :replace
+              :keep-indent? true
+              :text "{:deps {com.xadecimal/mutable-var {:mvn/version \"{{version}}\"}}}"}
+             {:file "README.md"
+              :match "\\[com\\.xadecimal\\/mutable-var"
+              :action :replace
+              :keep-indent? true
+              :text "[com.xadecimal/mutable-var \"{{version}}\"]"}]}
