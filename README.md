@@ -10,13 +10,13 @@ To include `mutable-var` in your project, add the dependency to your project con
 ### Leiningen
 Add the following to your `project.clj` file:
 ```clj
-[com.xadecimal/mutable-var "0.1.0"]
+[com.xadecimal/mutable-var "0.2.0"]
 ```
 
 ### Clojure CLI/deps.edn
 Add the following to your `deps.edn`:
 ```clj
-{:deps {com.xadecimal/mutable-var {:mvn/version "0.1.0"}}}
+{:deps {com.xadecimal/mutable-var {:mvn/version "0.2.0"}}}
 ```
 
 ## Usage
